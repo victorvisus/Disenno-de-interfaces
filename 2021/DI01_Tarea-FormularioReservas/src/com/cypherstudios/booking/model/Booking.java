@@ -14,8 +14,8 @@ import java.util.Date;
 public abstract class Booking implements Comparable<Booking> {
 
     protected String customerName;
-    protected Date reservation;
-    protected int attendees;
+    protected Date eventDate;
+    protected int guest;
     protected String typeCuisine;
 
     /* Constructores */
@@ -24,8 +24,8 @@ public abstract class Booking implements Comparable<Booking> {
 
     public Booking(String customerName, Date reservation, int attendees, String typeCuisine) {
         this.customerName = customerName;
-        this.reservation = reservation;
-        this.attendees = attendees;
+        this.eventDate = reservation;
+        this.guest = attendees;
         this.typeCuisine = typeCuisine;
     }
 
@@ -38,8 +38,8 @@ public abstract class Booking implements Comparable<Booking> {
         this.customerName = customerName;
     }
 
-    public Date getReservation() {
-        return this.reservation;
+    public Date getEventDate() {
+        return this.eventDate;
     }
 
     /**
@@ -47,22 +47,22 @@ public abstract class Booking implements Comparable<Booking> {
      *
      * @return
      */
-    public String getReservationString() {
+    public String getEventDateString() {
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 
-        return sdf.format(this.reservation);
+        return sdf.format(this.eventDate);
     }
 
     public void setReservation(Date reservation) {
-        this.reservation = reservation;
+        this.eventDate = reservation;
     }
 
-    public int getAttendees() {
-        return this.attendees;
+    public int getGuest() {
+        return this.guest;
     }
 
-    public void setAttendees(int attendees) {
-        this.attendees = attendees;
+    public void setGuest(int guest) {
+        this.guest = guest;
     }
 
     public String getTypeCuisine() {
@@ -80,8 +80,8 @@ public abstract class Booking implements Comparable<Booking> {
 
         return "/**** Booking ****/"
                 + "\nNombre: " + customerName
-                + "\nFecha: " + sdf.format(reservation)
-                + "\nAsistentes: " + attendees
+                + "\nFecha: " + sdf.format(eventDate)
+                + "\nAsistentes: " + guest
                 + "\nTipo de cocina: " + typeCuisine;
     }
 

@@ -1,4 +1,4 @@
-package com.cypherstudios.booking.exceptions;
+package com.cypherestudios.booking.exceptions;
 
 /**
  *
@@ -67,6 +67,14 @@ public class BookingExceptions extends Exception {
             case 8:
                 //El objeto reserva no coincide con ningún tipo de reserva establecido
                 errorMsg = "Error al establecer la reserva de habitaciones";
+                break;
+            case 9:
+                //El objeto reserva no coincide con ningún tipo de reserva establecido
+                errorMsg = "Abre Book Dialog";
+                break;
+            case 10:
+                //El objeto reserva no coincide con ningún tipo de reserva establecido
+                errorMsg = "Abre Book List";
                 break;
             default:
                 //Cualquier otro error no establecido en este switch

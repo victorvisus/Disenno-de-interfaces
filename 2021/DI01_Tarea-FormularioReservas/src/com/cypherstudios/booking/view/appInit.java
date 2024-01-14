@@ -105,7 +105,7 @@ public class AppInit extends javax.swing.JFrame {
         nameEvent.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
         nameEvent.setForeground(new java.awt.Color(255, 0, 0));
         nameEvent.setText("EVENTS");
-        panelBackground.add(nameEvent, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, -1, -1));
+        panelBackground.add(nameEvent, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 160, -1, -1));
 
         imgLogo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         imgLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/cypherstudios/booking/resources/logo-circle-100x100.png"))); // NOI18N

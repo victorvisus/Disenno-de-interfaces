@@ -155,7 +155,7 @@ public class BookingDAO {
     private Booking buildStandardBooking(BookingDialog bookingWindow, Booking reservation) {
         reservation.setCustomerName(bookingWindow.txtCustomerName.getText());
         reservation.setReservation((Date) bookingWindow.dateReservation.getValue());
-        reservation.setAttendees((int) bookingWindow.spAttendees.getValue());
+        reservation.setGuest((int) bookingWindow.spAttendees.getValue());
         reservation.setTypeCuisine((String) bookingWindow.cbTypeCuisine.getSelectedItem());
 
         return reservation;
@@ -241,8 +241,8 @@ public class BookingDAO {
     private void fillColumns(DefaultTableModel bookingTable, int x, Booking getBooking) throws BookingExceptions {
         //Extrae los datos "básico" de la reserva
         bookingTable.setValueAt(getBooking.getCustomerName(), x, 1);
-        bookingTable.setValueAt(getBooking.getReservationString(), x, 2);
-        bookingTable.setValueAt(getBooking.getAttendees(), x, 3);
+        bookingTable.setValueAt(getBooking.getEventDateString(), x, 2);
+        bookingTable.setValueAt(getBooking.getGuest(), x, 3);
         bookingTable.setValueAt(getBooking.getTypeCuisine(), x, 4);
 
         // Evalua de que tipo de reserva es el objeto Booking

@@ -63,7 +63,7 @@ public class CtrlBookingList extends CtrlInit {
         /* Botón listar las Reservas */
         if (e.getSource() == bookingListWindows.btnBookingList) {
 
-            //addExamples(); //Creo objetos de ejemplo
+            addExamples(); //Creo objetos de ejemplo
             op.tableBookingList(bookingListWindows.jtBookingList, publicBookingList);
         }
     }
